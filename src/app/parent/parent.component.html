@@ -1,0 +1,13 @@
+<mat-card>
+    <h3>Product List</h3>
+    <mat-list>
+        <mat-list-item *ngFor="let product of productsList">
+            <span class="mr-15"> {{product.id}}</span> 
+            <span class="mr-15"> {{product.name}}</span> 
+            <button mat-raised-button color="primary" (click)="showDetails(product)">View Details</button>
+        </mat-list-item>
+       </mat-list>
+</mat-card>
+
+<app-child [parentData]="parentProductData"></app-child>
+
